@@ -56,7 +56,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -90,7 +91,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -103,7 +105,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -154,7 +157,8 @@
       "name": "triggerPayment",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -5839,14 +5843,60 @@
   },
   "networks": {
     "5777": {
-      "events": {},
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0xa4035636e99f06b7651a604c1019fa4e8779fe68ef27eeb74dff2de348f6199b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_itemIndex",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_step",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_itemAddress",
+              "type": "address"
+            }
+          ],
+          "name": "SupplyChainStep",
+          "type": "event"
+        }
+      },
       "links": {},
       "address": "0x0791059ce6Ad5A88817071f83F2b9fA5D5270BB0",
       "transactionHash": "0x886a8d61334d801b4f23964f64e626a120cd1c802d69da73d9157b147250239b"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-28T16:11:28.701Z",
+  "updatedAt": "2021-12-08T16:33:41.118Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
